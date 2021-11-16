@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.1.- Tipos de WAF | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-150"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="current-page-parent daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul>
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="22_soluciones_waf_web_application_firewall.html" class="current-page-parent daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul>
+         <li id="active"><a href="221_tipos_de_waf.html" class="active no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_soluciones_waf_web_application_firewall.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="222_mtodos_de_implementacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.1.- Tipos de WAF</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id345">
+<div class="iDevice emphasis0" >
+<div id="ta345_309_2" class="block iDevice_content">
+<div class="exe-text"><p>Existen 2 clases de WAF:</p>
+<h4>WAF de lista negra</h4>
+<p>Este tipo de WAF protege de ataques que nosotros conozcamos e incluyamos en la lista, es decir, que todo lo que no esté incluido en esta lista negra tendrá acceso.</p>
+<h4>WAF de lista blanca</h4>
+<p>Funciona a la inversa de un WAF de lista negra. En este caso, el WAF contendrá una lista blanca, es decir, que solo aquello que esté incluido en la lista tendrá acceso a nuestra web, bloqueando así todo el resto de las conexiones.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 320px;"><img src="cyberspace-2784907_640.jpg" alt="WAF" width="320" height="213" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/photos/el-ciberespacio-datos-alambre-2784907/" target="_blank" class="author" rel="noopener">jarmoluk</a>. <span class="title"><em>WAF</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">Pixabay License</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Existen también WAF híbridos los cuales incluye ambos tipos de lista para aprovecharse de las ventajas que supone cada uno de los tipos.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id346">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-346_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion346_86" class="block question iDevice_content">
+<p>Si decimos que cierta IP que tenemos apuntada en nuestra lista en el WAF tiene bloqueado el trafico a nuestra Web, ¿De que tipo de WAF estamos hablando?</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i346_89" class="sr-av"><a href="#answer-346_89">Opción 1</a></label><input type="radio" name="option346_86" id="i346_89" class="exe-radio-option exe-radio-option-0-2-346_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-346_89"><div id="taans346_89" class="block iDevice_content">
+<p>WAF de lista negra</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i346_8489" class="sr-av"><a href="#answer-346_8489">Opción 2</a></label><input type="radio" name="option346_86" id="i346_8489" class="exe-radio-option exe-radio-option-1-2-346_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-346_8489"><div id="taans346_8489" class="block iDevice_content">
+<p>WAF de lista blanca</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b346_86" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa1b346_86" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-346_89">Opción correcta</a><span> (<a href="#sa0b346_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-346_8489">Incorrecto</a><span> (<a href="#sa1b346_86">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_soluciones_waf_web_application_firewall.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="222_mtodos_de_implementacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

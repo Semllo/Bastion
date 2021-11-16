@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- Firewalls de próxima generación | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-144"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li class="current-page-parent"><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="current-page-parent daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul>
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li id="active"><a href="12_firewalls_de_prxima_generacin.html" class="active no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul class="other-section">
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li><a href="22_soluciones_waf_web_application_firewall.html" class="daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul class="other-section">
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_seguridad_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2.- Firewalls de próxima generación</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id337">
+<div class="iDevice emphasis0" >
+<div id="ta337_203_2" class="block iDevice_content">
+<div class="exe-text"><p>Mientras los firewalls típicos, controlan el tráfico de red a través de distintos tipos de reglas que impiden o permiten distintos tipos de tráfico de red (protocolos, puertos, etc), los firewalls de nueva generación son capaces incluso de supervisar los argumentos que comprenden los mensajes para analizarlos y detectar si hay intentos de intrusión o malware, y todo esto, en tiempo real para detener las amenazas.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 500px;"><img src="cyberspace-2784907_640.jpg" alt="Firewall" width="500" height="333" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/photos/el-ciberespacio-datos-alambre-2784907/" target="_blank" class="author" rel="noopener">jarmoluk</a>. <span class="title"><em>Firewall</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">Pixabay License</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Esta nueva generación incluye las características típicas de los cortafuegos tradicionales, integrando la prevención de intrusiones, fortaleciendo políticas de seguridad en el ámbito de aplicación, inspección de SSL (Seguridad de la capa de transporte) y SSH (Secure Shell), inspección de paquetes en línea, detección de malware basado en comportamiento anómalo.</p>
+<p>Un firewall de nueva generación además permite añadir nuevas características, las principales son:</p>
+<ul>
+<li>Sistema de prevención de intrusos.</li>
+<li>Control en las aplicaciones.</li>
+<li>Adaptación a la nube.</li>
+</ul>
+<p>La evolución diaria de las amenazas conlleva a una mejora constante en los sistemas de protección, los cortafuegos añaden un extra en las funcionalidades. Se incorpora los denominados UTM (Unified Threat Management) o gestión unificada de amenazas.</p>
+<p>Los UTM gestionan la mayoría de amenazas e incorporan funcionalidades como:</p>
+<ul>
+<li>Propios firewalls de red.</li>
+<li>Antivirus, antispyware.</li>
+<li>IDS/IPS sistemas de detección y prevención de intrusos.</li>
+<li>VPN, redes privadas virtuales.</li>
+<li>Filtrado de contenido.</li>
+<li>Pasarelas antivirus, antispam y antiphising.</li>
+<li>Prevención de fugas de datos.</li>
+</ul>
+<p>Al ser un elemento de seguridad perimetral se deben ubicar en un punto entre internet y los dispositivos de la red interna de la organización.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id338">
+<div class="iDevice emphasis0" >
+<div id="ta338_302_2" class="block iDevice_content">
+<div class="exe-text"><p>Podemos encontrarnos distribuciones de este tipo de firewalls tales como pfSense, OPNsense, Sophos UTM.</p>
+<h4>PfSense</h4>
+<p><strong>PfSense</strong> basado en FreeBSD, se adapta para el uso como cortafuegos y enrutador. Se puede gestionar a través de una interfaz web sencilla.</p>
+<p>Incluye funcionalidades predefinidas como:</p>
+<ul>
+<li>Firewall</li>
+<li>Tabla de estado.</li>
+<li>NAT</li>
+<li>Redundancia y alta disponibilidad.</li>
+<li>Balanceo de carga.</li>
+<li>VPN</li>
+<li>Multi-WAN</li>
+<li>Servidor PPPoE, DNS y DHCP.</li>
+<li>Monitorización y gráficos a tiempo real.</li>
+</ul>
+<h4>OPNsense</h4>
+<p><b>OPNsense</b>, de código abierto, orientado para usarse como router y firewall. Incluye las características de un firewall comercial, con actualizaciones constantes en seguridad.</p>
+<p>Entre las características podemos encontrar:</p>
+<ul>
+<li><a href="#te489d94f-23cb-4297-f6b4-ed56b373ddfa" id="linke489d94f-23cb-4297-f6b4-ed56b373ddfa" title="Traffic Shaper | " class="exe-tooltip definition-tt titled-tt"><strong>Traffic Shaper</strong></a>.</li>
+<li><strong>Portal cautivo, </strong>que vigila el tráfico HTTP.</li>
+<li><strong>Proxy caché </strong>con listas negras.</li>
+<li><strong>Uso de VPN</strong>, con compatibilidad con IPSEC y OpenVPN.</li>
+<li><strong>Sistemas de detección IDS/IPS </strong>y prevención de intrusos.</li>
+<li>Posee una opción de <strong>alta disponibilidad</strong> la cual permite que cuando caiga un firewall otro lo respalde.</li>
+<li><strong>Servidores DNS y DHCP.</strong></li>
+<li>Herramientas integradas de <strong>generación de informes y monitorización con gráficos RRD a tiempo real</strong>.</li>
+<li><strong>Copia de seguridad cifrada guardada en la nube</strong>.</li>
+<li><strong>Soporte con VLAN 802.1Q</strong> para dividir la red.</li>
+</ul>
+<div id="te489d94f-23cb-4297-f6b4-ed56b373ddfa" class="exe-tooltip-text">
+<p>Herramienta que nos permite definir reglas para limitar el ancho de banda de aplicaciones.</p>
+</div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper TrueFalseIdevice em_iDevice em_iDevice_question" id="id339">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta Verdadero-Falso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta339_100" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b339" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b339" class="block iDevice_content">
+<p>El UTM PFSense puede enrutar el tráfico como si de un router se tratase.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b339"><input type="radio" name="option0b339" id="true0b339" class="exe-radio-option exe-radio-option-0-2-0b339-truefalse" /> Verdadero</label> 
+<label for="false0b339"><input type="radio" name="option0b339" id="false0b339" class="exe-radio-option exe-radio-option-1-2-0b339-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b339" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b339-result" class="right">Verdadero</strong></p>
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_seguridad_perimetral.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

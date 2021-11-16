@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.2.- Métodos de implementación | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-151"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="current-page-parent daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul>
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="22_soluciones_waf_web_application_firewall.html" class="current-page-parent daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul>
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li id="active"><a href="222_mtodos_de_implementacin.html" class="active no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="221_tipos_de_waf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="223_practica_modsecurity_en_apache.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.2.- Métodos de implementación</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id347">
+<div class="iDevice emphasis0" >
+<div id="ta347_310_2" class="block iDevice_content">
+<div class="exe-text"><p>Los WAF pueden implementarse de tres formas diferentes:</p>
+<h4>WAF en red</h4>
+<p>En este tipo el WAF se implementa en nuestra red, actuando como un dispositivo de la misma. Este tipo de WAF recibe todas las peticiones web y las analiza antes de reenviarlas a nuestro servicio web deseado en función de las reglas establecidas.</p>
+<h4>WAF en host</h4>
+<p>En este caso, el WAF se instala en el servidor que aloja nuestra web, ya sea como una herramienta que funciona por sí misma de forma independiente o como una extensión de un servidor web como Apache o Nginx. También se puede instalar en CMS.</p>
+<h4>WAF en la nube</h4>
+<p>Son WAF que se encuentran en un servidor de internet que es el que filtra las conexiones que luego son mandadas a nuestro propio servidor web. Lo bueno de este tipo de WAF es que normalmente no hay que configurar nada más, si no que la empresa que ofrece estos WAF es la que se encarga de su gestión.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 320px;"><img src="network-4393372_640.jpg" alt="WAF" style="display: block; margin-left: auto; margin-right: auto;" width="320" hspace="auto" height="213" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/photos/red-edp-enchufe-4393372/" target="_blank" class="author" rel="noopener">Bru-nO</a>. <span class="title"><em>WAF</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">Pixabay License</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id348">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta348_128" class="block iDevice_content">
+<p>Akamai WAF:</p>
+<p><a href="https://www.akamai.com/es/es/resources/web-application-firewall.jsp">https://www.akamai.com/es/es/resources/web-application-firewall.jsp</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="221_tipos_de_waf.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="223_practica_modsecurity_en_apache.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

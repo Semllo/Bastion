@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.3.- Practica ModSecurity en Apache | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-152"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="current-page-parent daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul>
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="22_soluciones_waf_web_application_firewall.html" class="current-page-parent daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul>
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li id="active"><a href="223_practica_modsecurity_en_apache.html" class="active no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="222_mtodos_de_implementacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.3.- Practica ModSecurity en Apache</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id349">
+<div class="iDevice emphasis0" >
+<div id="ta349_313_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>ModSecurity</strong> es un WAF de código libre utilizado como un módulo de Apache, con el cual dotamos de protección a nuestro sitio web y nos permitirá gestionar la misma.</p>
+<p>Vamos a ver cómo utilizarlo.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id350">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Instalación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta350_315_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-carousel">
+<h2></h2>
+<p>Para esta practica haremos uso de un Ubuntu Server con un apache en el que instalaremos este módulo.</p>
+<p> </p>
+<p>Antes que nada, si no disponemos de apache o queremos empezar ahora a usarlo podemos instalarlo. Para ello ejecutamos:</p>
+<p><strong> </strong></p>
+<p><strong>~# apt-get update</strong></p>
+<p><strong>~# apt-get install apache2 apache2-dev</strong></p>
+<p><strong><img src="img0.1.png" alt="Instalación Apache" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="481" /></strong></p>
+<h2></h2>
+<p>También tendremos que instalar las dependencias necesarias para esta práctica, para ello:</p>
+<p><strong>~# apt-get install bison build-essential ca-certificates curl dh-autoreconf doxygen flex gawk git iputils-ping libcurl4-gnutls-dev libexpat1-dev libgeoip-dev liblmdb-dev libpcre3-dev libpcre++-dev libssl-dev libtool libxml2 libxml2-dev libyajl-dev locales lua5.3-dev pkg-config wget zlib1g-dev zlibc</strong></p>
+<p><strong><img src="img1.png" alt="Instalación dependencias" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="533" /></strong></p>
+<h2></h2>
+<p>Una vez tengamos todo lo necesario instalado, vamos a descargarnos de GitHub el algoritmo de fuzzing ssdeep. Para ello:</p>
+<p><strong>~# git clone https://github.com/ssdeep-project/ssdeep</strong></p>
+<p><strong><img src="img2.png" alt="Descarga ssdeep de github" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="128" /></strong></p>
+<h2></h2>
+<p>Ahora que ya tenemos descargado ssdeep, vamos a compilarlo para ello vamos a ejecutar estos 4 comandos en su carpeta:</p>
+<p></p>
+<p><strong>~# ./bootstrap</strong></p>
+<p><strong>~# ./configure</strong></p>
+<p><strong><img src="img3.png" alt="compilación ssdeep 1" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="836" /></strong></p>
+<h2></h2>
+<p><strong>~# make</strong></p>
+<p><strong><img src="img4.png" alt="Compilación ssdeep 2" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="609" /></strong></p>
+<h2></h2>
+<p><strong>~# make install</strong></p>
+<p><strong><img src="img5.png" alt="Compilación ssdeep 3" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="611" /></strong></p>
+<h2></h2>
+<p>Hacemos lo mismo con ModSecurity, por lo que vamos en este caso a descargar ModSecurity desde su GitHub. Para ello:</p>
+<p> </p>
+<p><strong>~# git clone https://github.com/SpiderLabs/ModSecurity</strong></p>
+<p><strong><img src="img6.png" alt="Descarga ModSecurity github" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="214" /></strong></p>
+<h2></h2>
+<p>Antes de compilarlo, vamos a comprobar que está en su última versión con estos 3 comandos:</p>
+<p> </p>
+<p><strong>~# git checkout -b v3/master origin/v3/master </strong></p>
+<p><strong>~# git submodule init </strong></p>
+<p><strong>~# git submodule update</strong></p>
+<p><strong><img src="img7.png" alt="Comprobaciones ModSecurity" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="271" /></strong></p>
+<h2></h2>
+<p>Una vez comprobado y actualizado ModSecurity, vamos a compilarlo con los siguientes 4 comandos:</p>
+<p> </p>
+<p><strong>~# ./build.sh </strong></p>
+<p><strong>~# ./configure </strong></p>
+<p><strong>~# make</strong></p>
+<p><strong>~# make install</strong></p>
+<p>Este proceso llevará un rato. Cuando terminemos de ejecutar los 4 comandos, nos aparecerá esto al final:</p>
+<p><img src="img8.png" alt="Compilación ModSecurity" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="466" /></p>
+<h2></h2>
+<p>Por último vamos a instalar el conector de ModSecurity con Apache. Para ello vamos a descargarlo también desde su gitlab:</p>
+<p><strong>~# git clone <a href="https://github.com/SpiderLabs/ModSecurity-apache">https://github.com/SpiderLabs/ModSecurity-apache</a></strong></p>
+<p><strong><img src="img9.png" alt="Descarga conector ModSecurity-Apache" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="192" /></strong></p>
+<h2></h2>
+<p>Y también lo compilamos e instalamos con los siguientes comandos:</p>
+<p><strong>~# ./autogen.sh</strong></p>
+<p><strong>~# ./configure --with-libmodsecurity=/usr/local/modsecurity</strong></p>
+<p><strong><img src="img10.png" alt="Compilación conector 1" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="512" /></strong></p>
+<h2></h2>
+<p><strong>~# make</strong></p>
+<p><strong><img src="img11.png" alt="Compilación conector 2" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="477" /></strong></p>
+<h2></h2>
+<p><strong>~# make install</strong></p>
+<p><strong><img src="img12.png" alt="Compilación conector 3" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="267" /></strong></p>
+<p>Ahora que ya tenemos todos los programas necesarios instalados, vamos a configurar nuestro WAF.</p>
+<h2>Configuración</h2>
+<p>Antes de ponernos a configurarlo, vamos a descargar las reglas de ModSecurity que incluye muchas reglas muy útiles. Para ello ejecutamos:</p>
+<p><strong>~# wget https://github.com/SpiderLabs/owasp-modsecurity-crs/archive/v3.2.0.tar.gz</strong></p>
+<p><strong><img src="img13.png" alt="Descarga reglas ModSecurity" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="308" /></strong></p>
+<h2></h2>
+<p>Ahora lo descomprimimos, renombramos los siguientes ficheros y lo movemos a nuestro <strong>/usr/local</strong><strong></strong></p>
+<p><strong>~# tar -zxvf v3.2.0.tar.gz</strong></p>
+<p><strong><img src="img14.png" alt="Descompresión reglas" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="535" /></strong></p>
+<h2></h2>
+<p><strong>~# mv owasp-modsecurity-crs-3.2.0 owasp-modsecurity-crs</strong></p>
+<p><strong>~# mv owasp-modsecurity-crs/crs-setup.conf.example owasp-modsecurity-crs/crs-setup.conf</strong></p>
+<p><strong>~# mv owasp-modsecurity-crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example owasp-modsecurity-crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf</strong></p>
+<p><strong>~# mv owasp-modsecurity-crs /usr/local/</strong></p>
+<p><strong><img src="img15.png" alt="Moviendo directorios a lugares necesarios" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="200" /></strong></p>
+<h2></h2>
+<p>Procedemos ahora a crear el módulo de ModSecurity. Para ello en el directorio mods-enabled creamos <strong>security3.conf</strong>.</p>
+<p> </p>
+<p><strong>nano /etc/apache2/mods-enabled/security3.conf</strong></p>
+<p> </p>
+<p>donde escribiremos lo siguiente:</p>
+<p>“<strong>LoadModule security3_module /usr/lib/apache2/modules/mod_security3.so</strong></p>
+<p><strong>modsecurity on</strong></p>
+<p><strong>modsecurity_rules_file '/etc/apache2/modsec/main.conf'</strong>”</p>
+<p><img src="img16.png" alt="Configuración modulo apache modsecurity" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="130" /></p>
+<h2></h2>
+<p>Vamos ahora a crear el directorio de modsecurity en apache y copiamos varios archivos de configuración en él.</p>
+<p><strong>~# mkdir -p /etc/apache2/modsec</strong></p>
+<p><strong>~# cp ~/ModSecurity/ModSecurity/unicode.mapping /etc/apache2/modsec/</strong></p>
+<p><strong>~# cp ~/ModSecurity/ModSecurity/modsecurity.conf-recommended /etc/apache2/modsec/modsecurity.conf</strong></p>
+<p><strong><img src="img17.png" alt="Creación directorio modsec y copia de archivos" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="162" /></strong></p>
+<h2></h2>
+<p>Ahora cambiamos unas líneas de configuración del <b>modsecurity.conf. </b>Para ello abrimos el archivo con nano y buscamos la linea: ”<b><span>SecRuleEngine DetectionOnly</span></b>”</p>
+<p><img src="img18.png" alt="Configuración archivo modsecurity.conf 1" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="322" /></p>
+<h2></h2>
+<p>Y tenemos que cambiarla por: “<strong>SecRuleEngine DetectionOnly”</strong></p>
+<p><strong><img src="img19.png" alt="Configuración archivo modsecurity.conf 2" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="351" /></strong></p>
+<h2></h2>
+<p>Y buscamos en el mismo archivo también la linea: “<strong>SecAuditLog /var/log/modsec_audit.log</strong>”</p>
+<p><img src="img20.png" alt="Configuración archivo modsecurity.conf 3" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="262" /></p>
+<h2></h2>
+<p>Y la cambiamos por: “<b><span>SecAuditLog /var/log/apache2/modsec_audit.log</span></b>”</p>
+<p><img src="img21.png" alt="Configuración archivo modsecurity.conf 4" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="292" /></p>
+<h2></h2>
+<p>Configuraremos ahora un archivo que utilizaremos para que ModSecurity pueda acceder a las reglas previamente descargadas. Este archivo se va a llamar <strong>main.conf</strong> y lo crearemos en la ruta de apache2 con:</p>
+<p><strong>~# nano /etc/apache2/modsec/main.conf</strong></p>
+<p>En el que incluiremos estas 3 lineas:</p>
+<p>“<strong>Include "/etc/apache2/modsec/modsecurity.conf"</strong></p>
+<p><strong>Include "/usr/local/owasp-modsecurity-crs/crs-setup.conf"</strong></p>
+<p><strong>Include "/usr/local/owasp-modsecurity-crs/rules/*.conf"</strong>”</p>
+<p></p>
+<p><img src="img22.png" alt="Configuración archivo main.conf" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="119" /></p>
+<h2></h2>
+<p>Para finalizar la configuración vamos a ejecutar el comando:</p>
+<p><strong>~# </strong><strong>sudo ldconfig</strong></p>
+<p> </p>
+<p>Este comando reseteará las librerías añadidas y por último reiniciamos el servicio de apache2 para guardar todos los cambios realizados y arrancar apache.</p>
+<p> </p>
+<p><strong>~# </strong><strong>service apache2 restart</strong></p>
+<p><strong><img src="img23.png" alt="Reseteo de librerías y de apache" style="display: block; margin-left: auto; margin-right: auto;" width="700" height="143" /></strong></p>
+<h2></h2>
+<p>Para comprobar que se ha importado el módulo de ModSecurity usamos el comando:</p>
+<p> </p>
+<p><strong>~# apachectl -M | grep -E -i "loaded|security3_module"</strong></p>
+<p><strong><img src="img24.png" alt="Comprobación módulo modsecurity" style="display: block; margin-left: auto; margin-right: auto;" width="1043" height="90" /></strong></p>
+<h2></h2>
+<p>Ahora podemos acceder a nuestro sitio web y comprobar que genera logs en el WAF. Para ver los logs que genera ModSecurity, usamos:</p>
+<p></p>
+<p><strong>~# tail -f /var/log/apache2/modsec_audit.log</strong></p>
+<p><strong><img src="img25.png" alt="Navegación web" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="373" /></strong></p>
+<p><strong><img src="img26.png" alt="Logs navegación web" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="275" /></strong></p>
+<h2>Instalación de DVWA</h2>
+<p>Vamos a realizar ahora pruebas de que ModSecurity bloquea ataques maliciosos. Para ello vamos a instalar DVWA en nuestro apache, que es una herramienta para realizar ataques.</p>
+<p>Lo primero será instalar los paquetes faltantes:</p>
+<p><strong>~# apt-get -y install mariadb-server php php-mysqli php-gd libapache2-mod-php</strong></p>
+<p><strong><img src="img29.png" alt="Instalación dependencias" style="display: block; margin-left: auto; margin-right: auto;" width="1032" height="40" /></strong></p>
+<h2></h2>
+<p>Lo primero será configurar la base de datos:</p>
+<p><strong>~# mysql -u root -p</strong></p>
+<p><strong><img src="img30.png" alt="Configurando base de datos" style="display: block; margin-left: auto; margin-right: auto;" width="600" height="62" /></strong></p>
+<h2></h2>
+<p>Creamos la base de datos que va a utilizar:</p>
+<p><strong>create database dvwa;</strong></p>
+<p><strong><img src="img31.png" alt="Creando base de datos con MariaDB" style="display: block; margin-left: auto; margin-right: auto;" width="600" height="86" /></strong></p>
+<h2></h2>
+<p>Generamos el usuario de la base de datos con todos los permisos y una contraseña:</p>
+<p><strong>grant all on dvwa.* to sshteam@localhost identified by "P@ssw0rd";</strong></p>
+<p><img src="img32.png" alt="Generando usuario de base de datos" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="58" /></p>
+<h2></h2>
+<p>Recargamos los privilegios:</p>
+<p><strong>flush privileges;</strong></p>
+<p><img src="img33.png" alt="Recargando privilegios" style="display: block; margin-left: auto; margin-right: auto;" width="500" height="66" /></p>
+<h2></h2>
+<p><strong>quit</strong></p>
+<p><img src="img34.png" alt="Saliendo de MariaDB" style="display: block; margin-left: auto; margin-right: auto;" width="400" height="70" /></p>
+<h2></h2>
+<p>Ahora eliminaremos el index.html por defecto de apache:</p>
+<p><strong>~# rm -rf /var/www/html/index.html</strong></p>
+<p><img src="img35.png" alt="Eliminando index.html de apache por defecto" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="37" /></p>
+<h2></h2>
+<p>Y descargamos DVWA en <strong>/var/www/html</strong></p>
+<p><strong>~# git clone https://github.com/ethicalhack3r/DVWA /var/www/html/</strong></p>
+<p><img src="img36.png" alt="Descargando DVWA" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="40" /></p>
+<h2></h2>
+<p>Ahora procedemos a renombrar el archivo de configuración de ejemplo:</p>
+<p><strong>~# cp /var/www/html/config/config.inc.php.dist /var/www/html/config/config.inc.php</strong></p>
+<p><strong><img src="img37.png" alt="Renombrando config.ini.dist" style="display: block; margin-left: auto; margin-right: auto;" width="865" height="40" /></strong></p>
+<h2></h2>
+<p>Editamos el archivo config.inc.php:</p>
+<p><strong>~# nano /var/www/html/config/config.inc.php</strong></p>
+<p><strong><img src="img38.png" alt="Editando config.inc.php" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="35" /></strong></p>
+<h2></h2>
+<p>En el archivo de configuración editamos las opciones correspondientes a la base de datos:</p>
+<p><img src="img39.png" alt="Editando configuraciones pertinentes" style="display: block; margin-left: auto; margin-right: auto;" width="400" height="351" /></p>
+<h2></h2>
+<p>Reiniciamos mariadb.</p>
+<p><strong>~# systemctl restart mariadb</strong></p>
+<p><strong><img src="img40.png" alt="Reiniciando servicio MariaDB" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="42" /></strong></p>
+<h2></h2>
+<p>Procedemos a instalar PHP:</p>
+<p><strong>~# apt install php-gd</strong></p>
+<p><strong><img src="img41.png" alt="Instalando PHP" style="display: block; margin-left: auto; margin-right: auto;" width="600" height="36" /></strong></p>
+<h2></h2>
+<p>Comprobamos la versión:</p>
+<p><strong>~# php -v</strong></p>
+<p><strong><img src="img42.png" alt="Comprobando versión PHP" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="111" /></strong></p>
+<h2></h2>
+<p>Editamos el archivo de <strong>php.ini</strong></p>
+<p><strong>~# nano /etc/php/7.3/apache2/php.ini</strong></p>
+<p>Y modificamos la siguiente línea dejándola así:</p>
+<p><img src="img43.png" alt="Modificando archivo php.ini" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="72" /></p>
+<h2></h2>
+<p>Guardamos y damos permisos a www-data sobre la carpeta html:</p>
+<p><strong>~# chown -R www-data:www-data /var/www/html</strong></p>
+<p><strong><img src="img44.png" alt="Dando permisos al directorio /var/www/html" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="45" /></strong></p>
+<h2></h2>
+<p>Y reiniciamos apache2:</p>
+<p><strong>~# systemctl restart apache2</strong></p>
+<p><strong><img src="img45.png" alt="Reinicando servicio apache" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="47" /></strong></p>
+<h2></h2>
+<p>Ahora accederemos por navegador a la IP para finalizar la configuración de DVWA:</p>
+<p><img src="img46.png" alt="Accediendo a DVWA vía web" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="656" /></p>
+<h2></h2>
+<p>Accedemos con nuestras credenciales definidas durante la configuración de mariadb y en la siguiente ventana pulsamos el botón de <strong>Create / Reset Database.</strong></p>
+<p><strong><img src="img47.png" alt="Interfaz principal DVWA" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="786" /></strong></p>
+<p><strong></strong></p>
+<h2></h2>
+<p></p>
+<p>Una vez hecho, accedemos de nuevo, ahora, con las credenciales <strong>admin:password</strong> y ya tendremos configurado DVWA.</p>
+<p>En este momento, dispondremos de nuestro WAF junto a DVWA. </p>
+<p>Una vez tengamos un DVWA podemos acceder por ejemplo a la parte de SQL Injection y probar con un ataque. Vemos que modsecurity nos lo bloquea:</p>
+<p><img src="img27.png" alt="Intento de ataque SQL Injection" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="866" /></p>
+<p><img src="img28.png" alt="Bloqueo de intento de ModSecurity" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="315" /></p>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="222_mtodos_de_implementacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

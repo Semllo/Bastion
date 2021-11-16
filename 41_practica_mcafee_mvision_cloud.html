@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Practica. McAfee Mvision Cloud | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-183"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul class="other-section">
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li><a href="22_soluciones_waf_web_application_firewall.html" class="daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul class="other-section">
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="current-page-parent daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul>
+      <li id="active"><a href="41_practica_mcafee_mvision_cloud.html" class="active no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_seguridad_del_correo_electrnico.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1.- Practica. McAfee Mvision Cloud</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id437">
+<div class="iDevice emphasis0" >
+<div id="ta437_322_2" class="block iDevice_content">
+<div class="exe-text"><p><span>Este programa permite acceder a la versión trial del programa durante 2 meses gratis. </span></p>
+<p><span>Vamos a ver como funciona:</span></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id438">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Manual de Uso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta438_321_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-carousel">
+<h2></h2>
+<p><span>Cuándo se accede al programa lo primero que aparece es un dashboard en el que se pueden ver:</span></p>
+<ul>
+<li><span> </span><span>Número de incidentes.</span></li>
+<li><span> </span><span>Dispositivos escalados (número de dispositivos que han recibido una amenaza).</span></li>
+<li><span> </span><span>Amenazas resueltas.</span></li>
+<li><span> </span><span>Amenazas sin resolver.</span></li>
+<li><span> </span><span>Detecciones solamente informativas. </span></li>
+<li><span> </span><span>Eventos de encriptación (eventos de encriptación importantes o críticos).</span></li>
+<li><span> </span><span>Contenido de seguridad (porcentaje de sistemas que se encuentran dentro de un número concreto de días mediante el uso de un <a href="#t3b30f417-e9b1-5de9-0133-76a5bb61d3f3" id="link3b30f417-e9b1-5de9-0133-76a5bb61d3f3" class="exe-tooltip definition-tt">DAT </a>actual).</span></li>
+<li><span> </span><span>Estado del software (estado del contenido de seguridad y los productos individuales desplegados en el entorno).</span></li>
+<li><span> </span><span>Administración de dispositivos.(número de dispositivos que no han informado de las detecciones o que no tienen un producto antimalware instalado).</span></li>
+</ul>
+<p></p>
+<p><img src="img0.png" alt="Dashboard de McAfee Mvision Cloud" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="499" /></p>
+<h2></h2>
+<p><span>Para añadir aplicaciones al agente se puede usar el Mvsion Marketplace. Dichas aplicaciones están disponibles en el entorno en unos pocos minutos.</span></p>
+<p><span><img src="img1.1.png" alt="Marketplace de McAfee Mvsion" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="447" /></span></p>
+<h2></h2>
+<p>Si se quiere configurar el despliegue de productos hay que ir al apartado <em>“Product Deployment”. En</em> dicho apartado se puede configurar el grupo sobre el que se crea dicha configuración, la plataforma, que se quiere instalar de cada programa y si se quiere actualizar automáticamente</p>
+<p><img src="img2.1.png" alt="Apartado “Product Deployment”" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="429" /></p>
+<h2></h2>
+<p>Si se quieren ver las estadísticas a través de gráficos de barras, sectores… Se pueden ver en el apartado “<em>Dashboards”</em>. Solamente se tiene que seleccionar el dashboard que se quiere mostrar.</p>
+<p><img src="img3.1.png" alt="Apartado dashboards" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="498" /></p>
+<h2></h2>
+<p><span>Si se desea añadir un nuevo equipo o grupo se puede hacer desde la opción “<em>System tree”</em>. Para crear un equipo hay que ir al apartado “<em>New Systems”</em> y para crear un nuevo subgrupo hay que ir al apartado “<em>New subgroups”.</em></span></p>
+<p><span>Creación de un usuario:</span></p>
+<p><span><img src="img4.1.png" alt="Creación del usuario" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="164" /></span></p>
+<h2></h2>
+<p>Una vez creado el usuario, aparecerá una dirección URL la cual descargará el agente McAfee Agent.</p>
+<p><img src="img5.1.png" alt="URL del agente" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="145" /></p>
+<h2></h2>
+<p>Una vez ya instalado el programa en el equipo, dicho equipo aparecerá en el árbol del sistema.</p>
+<p><img src="img6.1.png" alt="Listado de sistemas" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="142" /></p>
+<h2></h2>
+<p>Si se hace click sobre un sistema, se puede ver con detalle la información del sistema, su dirección IP, nombre de dominio, políticas aplicadas, productos instalados, malware detectado de dicho equipo...</p>
+<p><img src="img7.1.png" alt="Detalles de un sistema" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="309" /></p>
+<h2></h2>
+<p><span>Creación del subgrupo:</span></p>
+<p><span>Para crear un subgrupo lo único que hay que hacer es hacer click sobre “<em>New Subgroups</em>” en el apartado de “<em>System Tree”.</em> Después lo único que necesitamos es asignarle un nombre al grupo.</span></p>
+<p><span> <img src="img8.1.png" alt="Creación de un subgrupo" style="display: block; margin-left: auto; margin-right: auto;" width="600" height="359" /></span></p>
+<h2></h2>
+<p>También se dispone de un catálogo de políticas. Dicho catálogo de políticas tiene varias políticas predefinidas, aunque también se pueden crear políticas nuevas a través del botón “<em>New Policy”.</em></p>
+<p><em><img src="img9.1.png" alt="Catálogo de políticas" style="display: block; margin-left: auto; margin-right: auto;" width="800" height="331" /></em></p>
+<h2></h2>
+<p>Aparte de crear nuevas políticas también se pueden editar las políticas que ya trae por defecto el agente. Para ello hay que pulsar sobre “<em>Edit</em>” y cambiar los valores que se quieran.</p>
+<p><img src="img10.1.png" alt="Modificación de una política." style="display: block; margin-left: auto; margin-right: auto;" width="800" height="267" /></p>
+</div>
+<p></p>
+<div id="tceb04a4c-32b7-3cd4-6890-68d7a376ac31" class="exe-tooltip-text">
+<p>DAT</p>
+</div>
+<div id="t3b30f417-e9b1-5de9-0133-76a5bb61d3f3" class="exe-tooltip-text">
+<p>Los archivos DAT contienen firmas y otra información que los productos antivirus de McAfee utilizan para proteger el equipo contra amenazas.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id8">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_128" class="block iDevice_content">
+<p>Puedes solicitar una demo de 2 meses desde el siguiente enlace:</p>
+<p><a href="https://cloudsecurity.mcafee.com/cloud/en-us/forms/2-step-request-a-demo-mfe.html?source=MFE_Website&amp;lsource=MFE_Website">https://cloudsecurity.mcafee.com/cloud/en-us/forms/2-step-request-a-demo-mfe.html?source=MFE_Website&amp;lsource=MFE_Website</a></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_seguridad_del_correo_electrnico.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

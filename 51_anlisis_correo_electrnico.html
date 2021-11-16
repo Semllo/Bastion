@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Análisis correo electrónico | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-185"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul class="other-section">
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li><a href="22_soluciones_waf_web_application_firewall.html" class="daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul class="other-section">
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_seguridad_del_correo_electrnico.html" class="current-page-parent daddy">5.- Seguridad del correo electrónico</a>
+   <ul>
+      <li id="active"><a href="51_anlisis_correo_electrnico.html" class="active no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_seguridad_del_correo_electrnico.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_proteccin_ante_ataques_dosddos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.- Análisis correo electrónico</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id441">
+<div class="iDevice emphasis0" >
+<div id="ta441_302_2" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id442">
+<div class="iDevice emphasis0" >
+<div id="ta442_303_2" class="block iDevice_content">
+<div class="exe-text"><div>A través del correo electrónico muchas veces pueden llegarnos correos electrónicos de dudosa procedencia, como, por ejemplo: correos que se hacen pasar por gente que conocemos y que nos piden información personal, correos con facturas que no hemos solicitado etc.</div>
+<div></div>
+<div>Para controlar la veracidad de estos correos y evitar en un futuro que nos suplanten o intenten suplantar a otro correo de nuestra organización debemos tener en cuenta ciertas cabeceras que nos facilitaran en gran medida a protegernos. Cada correo electrónico que es enviado dispone de unas cabeceras con información sobre el remitente entre ella, su dirección IP.</div>
+<div></div>
+<p>Ejemplo:</p>
+<p><img src="correo1.png" alt="cabeceras de correo electrónico" width="800" height="832" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<div class="exe-fx exe-accordion">
+<h2 style="text-align: left;"><span style="font-size: 14pt;"><strong>SPF</strong></span></h2>
+Sender Policity Framework, es una protección contra la falsificación de direcciones en el envío de correos electrónicos. Se define a través de un registro DNS en el que se incluye aquellos servidores que tienen potestad para enviar mensajes con ese dominio de correo. En caso de enviarse un correo desde un servidor no legítimo, podremos comprobarlo leyendo estas cabeceras.<br /><br /><br /><br /><span style="font-size: 1em;">Para configurar esta entrada, debemos definir en el servidor DNS una nueva entra TXT y definirla con una configuración similar a la siguiente:<br /><br /></span>
+<div></div>
+<div style="text-align: center;">v=spf1 include:&lt;<strong>servidor de correo legítimo</strong>&gt; ~all<br /><br /><br /></div>
+<div></div>
+<div>De esta manera solo obtendrán la cabecera correcta aquellos correos enviados desde el servidor SMTP legítimo.</div>
+<div></div>
+<h2><span style="font-size: 14pt;"><strong>DKIM</strong></span></h2>
+<p>Domain Keys Identified Mail, es un mecanismo que permite al receptor de un correo electrónico verificar que fue enviado y autorizado por el dueño del dominio de correo.</p>
+<div>Para su creación es necesario disponer de un entendimiento entre el dominio receptor y la entidad firmante. Debemos disponer de una cuenta en dicha entidad y generar el certificado. Para ello podemos generar fácilmente una entrada desde la siguiente página web:</div>
+<div></div>
+<div><a>https://easydmarc.com/tools/dkim-record-generator</a></div>
+<div></div>
+<div>Definimos nuestro dominio:</div>
+<div></div>
+<div><img src="img3.3.png" width="800" height="394" alt="DKIM Record Generator" style="display: block; margin-left: auto; margin-right: auto;" /></div>
+<div></div>
+<div></div>
+<div>Una vez generado, nos creará una clave privada que debemos especificar en la entidad firmante.</div>
+<div></div>
+<div><img src="img4.3.png" width="300" height="461" alt="Clave privada generada" style="display: block; margin-left: auto; margin-right: auto;" /></div>
+<div><br />Finalmente nos facilitará una entrada TXT que debemos añadir a nuestro host de dominio.</div>
+<div></div>
+<div><img src="img5.3.png" width="800" height="198" alt="Entrada TXT" style="display: block; margin-left: auto; margin-right: auto;" /></div>
+<div></div>
+<h2><span style="font-size: 14pt;"><strong>DMARC"</strong></span></h2>
+<p>Domain-based Message Authentication Reporting and Conformance, es otro mecanismo de autenticación de correo, amplía la seguridad de los mecanismos anteriores, permitiendo a un dominio verificar el campo "<b><em>From</em>"</b> de un correo electrónico.<br /><br /><br /></p>
+<div>Para configurarlo deberemos crear un nuevo registro TXT con la estructura:<br /><br /></div>
+<div></div>
+<div style="text-align: center;"><span> </span><span>_dmarc.<b>nuestrodominio</b>.TLD IN TXT 18000 "v=DMARC1; p=none; </span></div>
+<div style="text-align: center;"><span>rua=mailto:postmaster@<b>nuestrodominio</b>.com"</span></div>
+<div style="text-align: center;"></div>
+</div>
+<div><span></span></div>
+<p>Unas herramientas útiles a la hora de comprobar si un correo es legítimo o no, son:</p>
+<p><a href="https://toolbox.googleapps.com/apps/messageheader/">https://toolbox.googleapps.com/apps/messageheader/</a></p>
+<p><img src="correo2.png" alt="Comprobación de correo" width="1201" height="512" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p></p>
+<p><img src="spf.png" width="1199" height="438" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><a href="https://mxtoolbox.com/EmailHeaders.aspx">https://mxtoolbox.com/EmailHeaders.aspx</a></p>
+<p></p>
+<p>Ambas herramientas nos mostrarán información relevante disponible en las cabeceras de un modo más amable para el usuario.</p>
+<p><strong> </strong></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_seguridad_del_correo_electrnico.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_proteccin_ante_ataques_dosddos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

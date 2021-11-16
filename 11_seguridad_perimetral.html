@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Seguridad perimetral | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-196"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li class="current-page-parent"><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="current-page-parent daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul>
+      <li id="active"><a href="11_seguridad_perimetral.html" class="active no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul class="other-section">
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li><a href="22_soluciones_waf_web_application_firewall.html" class="daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul class="other-section">
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li><a href="6_proteccin_ante_ataques_dosddos.html" class="daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul class="other-section">
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li><a href="64_prctica_antiddos.html" class="no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_firewalls_de_prxima_generacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.- Seguridad perimetral</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id479">
+<div class="iDevice emphasis0">
+<div id="ta479_154" class="block iDevice_content">
+<p>Definimos seguridad perimetral como los elementos que permiten proteger a los sistemas sensibles de ser atacados por intrusos.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 499px;"><img src="chain-link-690503_640.jpg" alt="Seguridad Perimetral" width="499" height="280" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/photos/acoplamiento-de-cadena-valla-metal-690503/" target="_blank" class="author" rel="noopener">Free-Photos</a>. <span class="title"><em>Seguridad Perimetral</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">Pixabay License</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Se podría decir que es la primera línea de defensa, con la que se pretende cumplir una serie de tareas y/o cometidos:</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id480">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta480_151" class="block iDevice_content">
+<ul>
+<li><strong>Resistir</strong></li>
+<li><strong>Identificar</strong></li>
+<li><strong>Aislar y segmentar</strong></li>
+<li><strong>Filtrar y bloquear.</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id481">
+<div class="iDevice emphasis0">
+<div id="ta481_154" class="block iDevice_content">
+<p>Resistir, a los ataques externos que se puedan sufrir.</p>
+<p>Estos ataques se <strong>identificarán</strong> y se pondrán comunicar al administrador/es de la red/es para que investiguen sobre ellos.</p>
+<p>Por otro lado, los dispositivos y servicios que se encuentren en nuestra empresa, se <strong>aislarán y segmentarán</strong> en distintas zonas y redes como, por ejemplo, implementar el uso de VLAN para el aislamiento, y diferenciar las distintas zonas que se dividen al segmentarlas.</p>
+<p>Así mismo, todo el tráfico que se produzca se <strong>filtra</strong> analizando de donde viene y <strong>bloqueando</strong> aquel que no se desee que reciba nuestra red. El resultado, que solo se permite aquel tráfico que sea razonable y totalmente necesario y/o que genere confianza, podemos decir que se considera tráfico legitimo.</p>
+<p></p>
+<p><span>Se establecen unas herramientas que facilitan las tareas anteriores, para evitar intrusiones desautorizadas.</span></p>
+<p></p>
+<div class="exe-fx exe-tabs">
+<h2>Cortafuegos o Firewall</h2>
+<p>Permiten un aislamiento de los dispositivos externos y posibilita un control sobre el tráfico de red, ya que pueden tanto denegar como aceptar del acceso, se aplica sobre unas políticas de accesos.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 251px;"><img src="Firewall.jpg" alt="Firewall" width="251" height="251" hspace="auto" style="font-size: 1em; display: block; margin-left: auto; margin-right: auto;" />
+<figcaption class="figcaption"><a href="https://www.freepik.es/vector-gratis/internet-cosas-portatil_1196638.htm#page=1&amp;query=firewall&amp;position=3" target="_blank" class="author" rel="noopener">FreePik</a>. <span class="title"><em>Firewall</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">FreePik</span><span class="sep">)</span></span></figcaption>
+</figure>
+<h2>Red Privada Virtual (VPN)</h2>
+<p>Una VPN Se puede definir como una tecnología de red en la que se conectan los dispositivos a una red privada hacia otro servidor por medio de internet. Permite una conexión segura y encriptada. Proporciona un aislamiento en la red externa hacia la interna.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 500px;"><img src="https://cdn.pixabay.com/photo/2019/03/25/09/36/vpn-for-home-security-4079772_960_720.jpg" alt="Vpn For Home Security, Vpn For Android, Vpn For Mobile" title="VPN" width="500" hspace="auto" style="background-color: #ffffff; display: block; margin-left: auto; margin-right: auto;" />
+<figcaption class="figcaption"><a href="https://pixabay.com/es/illustrations/vpn-de-seguridad-para-el-hogar-4079772/" target="_blank" class="author" rel="noopener">StefanCoders</a>. <span class="title"><em>VPN</em></span> <span class="license"><span class="sep">(</span><span class="custom-license">Pixabay License</span><span class="sep">)</span></span></figcaption>
+</figure>
+<h2>Sistemas de detección y/o prevención de intrusión (IDS/IPS)</h2>
+<p>Este tipo de herramientas (software / hardware) se encargan de monitorizar el tráfico de red para detectar (IDS) y proteger (IPS) la infraestructura tecnológica de las organizaciones. En general son capaces de generar alertas de seguridad cuando detectan un posible ataque, registrar los eventos y bloquear el ataque.</p>
+<p><strong>IDS (Intrusion Detection System)</strong>, son sistemas de <strong>detección</strong> de intrusiones.</p>
+<ul>
+<li>Estos sistemas son capaces de monitorizar el tráfico de una red, analizan y comparan el tráfico contra sus <strong>bases de datos de conocimiento</strong>, que pueden ser "firmas" como las que gestionan los antivirus, reglas configurables (existen varias comunidades crean y actualizan reglas), etc.</li>
+<li>Ante cualquier actividad anómala emiten alertas a los responsables de sus gestión, para que analicen la información, por lo tanto no actúan tratando de mitigar la intrusión.</li>
+</ul>
+<p><strong>IPS (Intrusion Prevention System)</strong>, son sistemas de <strong>prevención</strong> de intrusiones.</p>
+<p>Al contrario que los IDS son capaces de proteger contra ataques e intrusiones, no solo alertar.</p>
+<ul>
+<li>Esto tiene sus <strong>ventajas</strong>: análisis de tráfico en tiempo real y bloqueo de tráfico o aislamiento de equipos sospechosos.</li>
+<li><strong>Desventajas</strong>: también se basan en firmas, reglas y patrones por lo que pueden dar "falsos positivos" y bloquear tráfico legítimo.</li>
+</ul>
+<h2>Honeypots</h2>
+<p>Sistemas trampa o señuelo, son herramientas (software / hardware) que simulan ser equipos vulnerables con el objetivo de atraer ataques sin ningún riesgo, para registrar la actividad y analizarla, bien en tiempo real para generar alertas, o bien posteriormente para aprender que tipos de ataques sufrimos, para mejorar la seguridad de la organización y evitar que vuelvan a producirse ataques similares.</p>
+<p>En sus inicios fueron desarrollados para simular entornos de red básicos (TI), poco a poco se han ido ampliando y hoy en día existen de todo tipo, incluso para redes industriales (TO). Se pueden implementar de manera individual o de forma conjunta, como una red de Honeypots que pueden llegar a simular entornos complejos y completos, estas redes reciben el nombre de Honeynets y son una herramienta fundamental para recabar información sobre los tipos de ataques que reciben las organizaciones.</p>
+<p>En la sección "Para saber más" puedes encontrar varios ejemplos de distintos honeypots y a través del siguiente <a href="https://www.cibernicola.es/esquemas/othp.html" target="_blank" rel="noopener">enlace</a> puedes ver un diagrama conceptual sobre honeypots, definiciones, usos, tipos y mucha más información.</p>
+<p></p>
+<h2>Sistemas anti-DDoS</h2>
+<p>Previenen o mitigan los llamados ataques de denegación de servicio, incluyendo los ataques distribuidos. Estos sistemas aprenden a modelar el comportamiento normal del tráfico, estableciendo unos puntos base a los volúmenes de dicho tráfico.</p>
+<h2>Pasarelas antivirus y anti spam</h2>
+<p><span>Se encargan del análisis y monitorización de archivos a través de firmas de virus, puede tener otras características más avanzadas (endpoint avanzado) para filtrar el tráfico, control de contenidos web, etc. También se pueden implementar en servicios de correo electrónico como filtro anti-spam.</span></p>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id482">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta482_128" class="block iDevice_content">
+<h4>HoneyPots</h4>
+<p>En los siguientes enlaces puedes profundizar el esta herramienta:</p>
+<p><strong>INCIBE</strong>. <a href="https://www.incibe-cert.es/blog/honeypot-herramienta-conocer-al-enemigo" target="_blank" rel="noopener">Honeypots, una herramienta para conocer al enemigo</a></p>
+<p><strong>T-POT: Una colmena de honeypots para atraparlos a todos: </strong><a href="https://www.elladodelmal.com/2017/07/t-pot-una-colmena-de-honeypots-para.html">https://www.elladodelmal.com/2017/07/t-pot-una-colmena-de-honeypots-para.html</a></p>
+<p><strong>Instalar T-POT en una máquina virtual:</strong> <a href="https://blog.elhacker.net/2021/01/instalar-honeypot-t-pot-en-una-maquina-virtual-tpotce-cowrie-docker-dionea.html">https://blog.elhacker.net/2021/01/instalar-honeypot-t-pot-en-una-maquina-virtual-tpotce-cowrie-docker-dionea.html</a></p>
+<p></p>
+<p>Algunos ejemplos de Honeypots industriales: <a href="https://www.honeynet.org/2015/09/09/gas-tank-monitoring-system-honeypot/" target="_blank" rel="noopener">Gask Tank</a> y <a href="https://revista.seguridad.unam.mx/numero29/conpot-honeypot-de-sistemas-de-control-industrial" target="_blank" rel="noopener">ConPot</a></p>
+<h4>Sistemas de IDS / IPS</h4>
+<p>En el siguiente enlace puedes profundizar en estos sistemas:</p>
+<p><strong>INCIBE</strong>. <a href="https://www.incibe.es/protege-tu-empresa/blog/son-y-sirven-los-siem-ids-e-ips" target="_blank" rel="noopener">¿Qué son y para que sirven los IDS e IPS?</a></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_firewalls_de_prxima_generacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>

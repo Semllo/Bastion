@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4.- Práctica anti-DDoS | UD 4: Dispositivos y sistemas informáticos externos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-197"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">UD 4: Dispositivos y sistemas informáticos externos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">UD 4: Dispositivos y sistemas informáticos externos</a></li>
+   <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+   <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+   <li><a href="1_seguridad_perimetral_firewalls_de_prxima_generacin.html" class="daddy">1.- Seguridad perimetral. Firewalls de Próxima Generación</a>
+   <ul class="other-section">
+      <li><a href="11_seguridad_perimetral.html" class="no-ch">1.1.- Seguridad perimetral</a></li>
+      <li><a href="12_firewalls_de_prxima_generacin.html" class="no-ch">1.2.- Firewalls de próxima generación</a></li>
+   </ul>
+   </li>
+   <li><a href="2_seguridad_de_portales_y_aplicativos_web_soluciones_waf.html" class="daddy">2.- Seguridad de portales y aplicativos web. Soluciones WAF</a>
+   <ul class="other-section">
+      <li><a href="21_seguridad_de_portales_y_aplicativos_web.html" class="daddy">2.1.- Seguridad de portales y aplicativos web</a>
+      <ul class="other-section">
+         <li><a href="211tipos_de_herramientas.html" class="no-ch">2.1.1.-Tipos de herramientas</a></li>
+         <li><a href="212_principales_vulnerabilidades.html" class="no-ch">2.1.2.- Principales vulnerabilidades</a></li>
+      </ul>
+      </li>
+      <li><a href="22_soluciones_waf_web_application_firewall.html" class="daddy">2.2.- Soluciones WAF (Web Application Firewall)</a>
+      <ul class="other-section">
+         <li><a href="221_tipos_de_waf.html" class="no-ch">2.2.1.- Tipos de WAF</a></li>
+         <li><a href="222_mtodos_de_implementacin.html" class="no-ch">2.2.2.- Métodos de implementación</a></li>
+         <li><a href="223_practica_modsecurity_en_apache.html" class="no-ch">2.2.3.- Practica ModSecurity en Apache</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_seguridad_del_puesto_de_trabajo_y_endpoint_fijo_y_mvil_antiapt_antimalware.html" class="daddy">3.- Seguridad del puesto de trabajo y endpoint fijo y móvil. AntiAPT, antimalware</a>
+   <ul class="other-section">
+      <li><a href="31_endpoint.html" class="no-ch">3.1.- Endpoint</a></li>
+      <li><a href="32_crowdstrike.html" class="no-ch">3.2.- CrowdStrike</a></li>
+   </ul>
+   </li>
+   <li><a href="4_seguridad_de_entornos_cloud_soluciones_casb.html" class="daddy">4.- Seguridad de entornos cloud. Soluciones CASB</a>
+   <ul class="other-section">
+      <li><a href="41_practica_mcafee_mvision_cloud.html" class="no-ch">4.1.- Practica. McAfee Mvision Cloud</a></li>
+   </ul>
+   </li>
+   <li><a href="5_seguridad_del_correo_electrnico.html" class="daddy">5.- Seguridad del correo electrónico</a>
+   <ul class="other-section">
+      <li><a href="51_anlisis_correo_electrnico.html" class="no-ch">5.1.- Análisis correo electrónico</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_proteccin_ante_ataques_dosddos.html" class="current-page-parent daddy">6.- Protección ante ataques DoS/DDoS</a>
+   <ul>
+      <li><a href="61_consecuencias_y_motivos.html" class="no-ch">6.1.- Consecuencias y motivos</a></li>
+      <li><a href="62__herramientas.html" class="no-ch">6.2.-  Herramientas</a></li>
+      <li><a href="63_cmo_protegernos.html" class="no-ch">6.3.- ¿Cómo protegernos?</a></li>
+      <li id="active"><a href="64_prctica_antiddos.html" class="active no-ch">6.4.- Práctica anti-DDoS</a></li>
+      <li><a href="65_prctica_con_cloudflare.html" class="no-ch">6.5.- Práctica con Cloudflare</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="glosario.html" class="no-ch">Glosario</a></li>
+   <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+   <li><a href="recursos_adicionales.html" class="no-ch">Recursos adicionales</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="63_cmo_protegernos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_prctica_con_cloudflare.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4.- Práctica anti-DDoS</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id14">
+<div class="iDevice emphasis0" >
+<div id="ta14_483_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-carousel">
+<h2></h2>
+<p>Para la realización de esta práctica, vamos a mitigar los ataques de denegación de servicio (DoS) utilizando Fail2Ban, para ello, necesitaremos de una máquina Ubuntu Server con Apache sobre la que crear el laboratorio.</p>
+<p><img src="img0.2.png" width="800" height="553" alt="Gráfico" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h2></h2>
+<p>Primero de todo deberemos instalar Fail2ban.</p>
+<p><strong>$ sudo apt install fail2ban</strong></p>
+<p><img src="img1.2.png" width="700" height="37" alt="1" /></p>
+<h2></h2>
+<p>Una vez instalado, creará los archivos de configuración en la ruta /etc/fail2ban</p>
+<p>En esta carpeta deberemos crear ciertos archivos, el primero, jail.conf</p>
+<p><strong>$sudo nano /etc/fail2ban/jail.local</strong></p>
+<p><img src="img2.2.png" width="700" height="34" alt="2" /></p>
+<h2></h2>
+<p>En este archivo añadiremos las siguientes líneas:</p>
+<p><em>[http-get-dos]</em></p>
+<p><em>enabled = true</em></p>
+<p><em>port = http,https</em></p>
+<p><em>filter = http-get-dos</em></p>
+<p><em>logpath = /var/log/apache*/*access.log</em></p>
+<p><em>maxretry = 300</em></p>
+<p><em>findtime = 5m</em></p>
+<p><em>bantime = 10m</em></p>
+<p><em>action = iptables[name=HTTP, port=http, protocol=tcp]</em></p>
+<p><em><img src="img3.4.png" width="700" height="212" alt="3" /></em></p>
+<p><strong>Enabled</strong> es donde indicamos que la regla esté activada.</p>
+<p><strong>Port</strong> definiremos el tipo de puertos a los que afectará, en nuestro caso aquellos puertos que usen tráfico http o https.</p>
+<p><strong>Filter</strong> indicamos el filtro que se utilizará para detectar las peticiones incorrectas.</p>
+<p><strong>Logpath </strong>definiremos el archivo de logs que se observará y filtrará por peticiones.</p>
+<p><strong>bantime</strong> es el tiempo que un host será bloqueado del servidor en caso de baneo. En este caso 10 minutos.</p>
+<p><strong>maxretry</strong> es el número de intentos fallidos realizados por una IP para que sea baneada. En este caso 5 intentos.</p>
+<p><strong>findtime</strong> es el tiempo en el que deben ocurrir las peticiones especificadas en maxretry para que la IP sea baneada. En este caso 5 minutos.  </p>
+<p><strong>action</strong> son las acciones que se van a realizar una vez se cumplan el resto de las pautas. En este caso, se bloqueará el acceso a la IP por iptables.</p>
+<h2></h2>
+<p>Ahora deberemos crear el archivo al que hace referencia el filtro que acabamos de crear.</p>
+<p>Los filtros se encuentran en la siguiente ruta <strong>/etc/fail2ban/filter.d/</strong></p>
+<p>Procedemos a crear un nuevo filtro:</p>
+<p><strong>$ sudo nano /etc/fail2ban/filter.d/http-get-dos.conf</strong></p>
+<p><img src="img4.4.png" width="800" height="25" alt="5" /></p>
+<h2></h2>
+<p>Y agregamos las siguientes líneas.</p>
+<p><em>[Definition]</em></p>
+<p><em>failregex = ^&lt;HOST&gt; -.*”(GET|POST).*</em></p>
+<p>Con la opción <strong>failregex </strong>filtraremos todas las peticiones GET y POST que se realicen, es decir, las contabilizaremos todas.</p>
+<p><img src="img5.4.png" width="800" height="71" alt="7" /></p>
+<h2></h2>
+<p>Una vez guardado el archivo, reiniciaremos fail2ban:</p>
+<p><img src="img6.3.png" width="700" height="29" alt="8" /></p>
+<h2></h2>
+<p>Con todo esto, ya dispondremos de nuestro servicio web protegido.</p>
+<p>Ahora, vamos a testearlo, la mejor manera es utilizar apache benchmark.</p>
+<p>Para ello, desde otra máquina a Linux (donde tengamos instalado el paquete apache2-utils) escribimos el siguiente comando, el cual, realizará 500 peticiones desde 10 conexiones distintas:</p>
+<p><strong>$ ab -n 500 -c 10 <a href="http://IP_del_fail2ban:80/">http://IP_del_fail2ban:80/</a></strong></p>
+<p><img src="img7.3.png" width="817" height="1108" alt="9" /></p>
+<h2></h2>
+<p>Ahora, podríamos comprobar desde los logs de nuestro fail2ban, encontrados en <strong>/var/log/fail2ban.log</strong> que la IP desde la que hemos hecho las pruebas ha sido baneada, impidiendo de esta forma los ataques.</p>
+<p><strong>$ cat /var/log/fail2ban.log</strong></p>
+<p><img src="img8.3.png" width="900" height="114" alt="10" /></p>
+<h2></h2>
+<p>Podemos comprobar también la regla configurada en <strong>iptables</strong> con el siguiente comando, donde veremos que la IP ha sido bloqueada.</p>
+<p><strong>$ sudo iptables -L</strong></p>
+<p><img src="img9.2.png" width="900" height="297" alt="11" /></p>
+<h2></h2>
+<p>Si por alguna razón, nuestro fail2ban ha detectado un falso positivo y banea una dirección IP legítima, podemos desbanearlas.</p>
+<p>Para ello, usamos el siguiente comando:</p>
+<p><strong>$ sudo fail2ban-client unban IP-de-maquina-atacante</strong></p>
+<p><img src="img10.2.png" width="900" height="98" alt="12" /></p>
+<h2></h2>
+<p>Comprobamos que la acción se ha efectuado con éxito:</p>
+<p><strong>$ cat /var/log/fail2ban.log</strong></p>
+<p><img src="img12.1.png" alt="filter" width="900" /></p>
+<h2></h2>
+<p>Si volvemos a mirar la configuración de iptables podremos observar que la regla anterior ya no existe:</p>
+<p><strong>$ sudo iptables -L</strong></p>
+<p><img src="img12.2.png" width="900" height="356" alt="iptables" /></p>
+</div></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="63_cmo_protegernos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="65_prctica_con_cloudflare.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_fpd_js.js"></script></body></html>
